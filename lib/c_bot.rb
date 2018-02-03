@@ -26,4 +26,16 @@ bot.message(content: '~beatmydick') do |event|
   voice_bot.destroy
 end
 
+# Adds event to play "arise chicken" audio clip
+bot.message(content: '~arisechicken') do |event|
+  channel = event.user.voice_channel
+  next unless channel
+  bot.voice_connect(channel)
+
+  voice_bot = event.voice
+  voice_bot.play_file('data/arisechicken.mp3')
+
+  voice_bot.destroy
+end
+
 bot.run
