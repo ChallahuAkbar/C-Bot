@@ -38,4 +38,40 @@ bot.message(content: '~arisechicken') do |event|
   voice_bot.destroy
 end
 
+# Adds event to play "Penn's stfu" audio clip
+bot.message(content: '~stfu') do |event|
+  channel = event.user.voice_channel
+  next unless channel
+  bot.voice_connect(channel)
+
+  voice_bot = event.voice
+  voice_bot.play_file('data/stfu.mp3')
+
+  voice_bot.destroy
+end
+
+# Adds event to play "Big Smoke moan" audio clip
+bot.message(content: '~smokemoan') do |event|
+  channel = event.user.voice_channel
+  next unless channel
+  bot.voice_connect(channel)
+
+  voice_bot = event.voice
+  voice_bot.play_file('data/smokemoan.mp3')
+
+  voice_bot.destroy
+end
+
+# Adds event to play "bird up" audio clip
+bot.message(content: '~birdup') do |event|
+  channel = event.user.voice_channel
+  next unless channel
+  bot.voice_connect(channel)
+
+  voice_bot = event.voice
+  voice_bot.play_file('data/birdup.mp3')
+
+  voice_bot.destroy
+end
+
 bot.run
