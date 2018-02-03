@@ -15,7 +15,7 @@ bot.message(with_text: /\buwu\b/i) do |event|
 end
 
 # Adds event to play "just beat my dick" audio clip
-bot.message(starts_with: '~beatmydick') do |event|
+bot.message(content: '~beatmydick') do |event|
   channel = event.user.voice_channel
   next unless channel
   bot.voice_connect(channel)
