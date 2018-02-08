@@ -2,6 +2,7 @@
 
 require 'discordrb'
 require 'configatron'
+require 'RMagick'
 require_relative 'config.rb'
 
 module CornBot

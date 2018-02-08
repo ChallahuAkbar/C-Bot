@@ -11,3 +11,6 @@ gem 'discordrb', '~> 3.2'
 
 # Configuration manager
 gem 'configatron', '~> 4.5'
+
+# ImageMagick interface
+gem 'rmagick', '~> 2.16'
