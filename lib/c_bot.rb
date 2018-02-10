@@ -4,6 +4,8 @@ require 'discordrb'
 require 'configatron'
 require 'rmagick'
 require 'open-uri'
+require 'tempfile'
+require 'securerandom'
 require_relative 'config.rb'
 
 module CornBot
@@ -93,8 +95,9 @@ module CornBot
         img.fuzz = '20%'
         next unless img.find_similar_region(WATERMARK, img.columns - 140, img.rows - 20)
         cropped = img.crop(0, 0, img.columns, img.rows - 20, true)
-        cropped.write('data/images/cropped.jpg')
-        event << event.attach_file('data/images/cropped.jpg')
+        temp_img = Tempfile.new([SecureRandom.uuid, '.jpg'])
+        cropped.write(temp_img.path)
+        event << event.attach_file(temp_img.binmode)
       end
     end
   end
