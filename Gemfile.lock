@@ -28,6 +28,7 @@ GEM
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 4.0)
       netrc (~> 0.8)
+    rmagick (2.16.0)
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.5)
@@ -42,6 +43,7 @@ PLATFORMS
 DEPENDENCIES
   configatron (~> 4.5)
   discordrb (~> 3.2)
+  rmagick (~> 2.16)
 
 RUBY VERSION
    ruby 2.5.0p0
