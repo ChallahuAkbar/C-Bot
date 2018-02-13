@@ -14,6 +14,9 @@ module CornBot
   WATERMARK = ImageList.new('data/images/ifunny_watermark.png')
   WATERMARK.fuzz = '20%'
 
+  HEAVY_CHECK_MARK = "\u2714".freeze
+  CROSS_MARK = "\u274c".freeze
+
   BOT = Discordrb::Bot.new token: configatron.token,
                            client_id: '168123456789123456'
 
@@ -97,7 +100,17 @@ module CornBot
         cropped = img.crop(0, 0, img.columns, img.rows - 20, true)
         temp_img = Tempfile.new([SecureRandom.uuid, '.jpg'])
         cropped.write(temp_img.path)
-        event << event.attach_file(temp_img.binmode)
+        reply = event.send_file(temp_img.binmode, caption: "#{event.author.mention} I cropped out the iFunny watermark. React with the check mark to keep this version or with the x to delete it.")
+
+        reply.react(HEAVY_CHECK_MARK)
+        reply.react(CROSS_MARK)
+
+        BOT.add_await(:"delete_#{reply.id}", Discordrb::Events::ReactionAddEvent) do |reaction|
+          next unless reaction.message.id == reply.id
+          next unless reaction.user == event.message.author
+          event.message.delete if reaction.emoji.name == HEAVY_CHECK_MARK
+          reply.delete if reaction.emoji.name == CROSS_MARK
+        end
       end
     end
   end
