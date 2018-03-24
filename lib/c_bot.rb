@@ -14,8 +14,8 @@ module CornBot
   WATERMARK = ImageList.new('data/images/ifunny_watermark.png')
   WATERMARK.fuzz = '20%'
 
-  HEAVY_CHECK_MARK = "\u2714".freeze
-  CROSS_MARK = "\u274c".freeze
+  HEAVY_CHECK_MARK = "\u2714"
+  CROSS_MARK = "\u274c"
 
   BOT = Discordrb::Bot.new token: configatron.token,
                            client_id: '168123456789123456'
@@ -93,6 +93,7 @@ module CornBot
     next unless event.message.attachments
     original_images = ImageList.new
     event.message.attachments.each do |attachment|
+      # HACK: The use of Kernel#open here is a security risk
       original_images << Image.from_blob(open(attachment.url).read).first if attachment.image?
       original_images.each do |img|
         img.fuzz = '20%'
