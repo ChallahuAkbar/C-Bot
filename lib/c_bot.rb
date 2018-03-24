@@ -22,8 +22,8 @@ module CornBot
 
   # Events section
 
-  # Adds event to kick any user who says uwu
-  BOT.message(with_text: /\buwu\b/i) do |event|
+  # Adds event to kick any user who says the secret word
+  BOT.message(with_text: /\bantiquities\b/i) do |event|
     event.server.kick(event.author)
   end
 
