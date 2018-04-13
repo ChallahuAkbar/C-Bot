@@ -1,15 +1,15 @@
 GIT
   remote: https://github.com/meew0/discordrb
-  revision: b52166633468c62041963aa1218a7f30d990eb06
+  revision: d3c5550c2518de6fd921f2f91a9b0cd3cd2c8ac8
   specs:
     discordrb (3.2.1)
       discordrb-webhooks (~> 3.2.0.1)
       opus-ruby
       rbnacl (~> 3.4.0)
-      rest-client
+      rest-client (>= 2.1.0.rc1)
       websocket-client-simple (>= 0.3.0)
     discordrb-webhooks (3.2.0.1)
-      rest-client
+      rest-client (>= 2.1.0.rc1)
 
 GEM
   remote: https://rubygems.org/
@@ -20,6 +20,7 @@ GEM
       unf (>= 0.0.5, < 1.0.0)
     event_emitter (0.2.6)
     ffi (1.9.23)
+    http-accept (1.7.0)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
     mime-types (3.1)
@@ -29,13 +30,14 @@ GEM
     opus-ruby (1.0.1)
       ffi
     parallel (1.12.1)
-    parser (2.5.0.5)
+    parser (2.5.1.0)
       ast (~> 2.4.0)
     powerpack (0.1.1)
     rainbow (3.0.0)
     rbnacl (3.4.0)
       ffi
-    rest-client (2.0.2)
+    rest-client (2.1.0.rc1)
+      http-accept (>= 1.7.0, < 2.0)
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 4.0)
       netrc (~> 0.8)
@@ -67,7 +69,7 @@ DEPENDENCIES
   rubocop (~> 0.54.0)
 
 RUBY VERSION
-   ruby 2.5.0p0
+   ruby 2.5.1p57
 
 BUNDLED WITH
    1.16.1
