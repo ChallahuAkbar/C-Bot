@@ -16,4 +16,4 @@ gem 'configatron', '~> 4.5'
 gem 'rmagick', '~> 2.16'
 
 # Code linting
-gem 'rubocop', '~> 0.54.0', require: false, group: :development
+gem 'rubocop', '~> 0.55.0', require: false, group: :development
