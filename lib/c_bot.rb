@@ -8,6 +8,7 @@ require 'tempfile'
 require 'securerandom'
 require_relative 'config.rb'
 
+# Top level module
 module CornBot
   include Magick
 
