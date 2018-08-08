@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/meew0/discordrb
-  revision: d8032302f8a77c78b0975d0b313d4803b8cfd302
+  revision: fe44273a6c7819994a587f744146a71276b052fd
   specs:
     discordrb (3.2.1)
       discordrb-webhooks (~> 3.2.0.1)
@@ -51,7 +51,7 @@ GEM
       rainbow (>= 2.2.2, < 4.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (~> 1.0, >= 1.0.1)
-    ruby-progressbar (1.9.0)
+    ruby-progressbar (1.10.0)
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.5)
