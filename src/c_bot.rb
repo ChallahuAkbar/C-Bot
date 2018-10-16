@@ -6,7 +6,7 @@ require 'rmagick'
 require 'open-uri'
 require 'tempfile'
 require 'securerandom'
-require_relative 'config.rb'
+require_relative '../config.rb'
 
 # Top level module
 module CornBot
@@ -32,6 +32,7 @@ module CornBot
   BOT.message(content: '~beatmydick') do |event|
     channel = event.user.voice_channel
     next unless channel
+
     BOT.voice_connect(channel)
 
     voice_bot = event.voice
@@ -44,6 +45,7 @@ module CornBot
   BOT.message(content: '~arisechicken') do |event|
     channel = event.user.voice_channel
     next unless channel
+
     BOT.voice_connect(channel)
 
     voice_bot = event.voice
@@ -56,6 +58,7 @@ module CornBot
   BOT.message(content: '~stfu') do |event|
     channel = event.user.voice_channel
     next unless channel
+
     BOT.voice_connect(channel)
 
     voice_bot = event.voice
@@ -68,6 +71,7 @@ module CornBot
   BOT.message(content: '~smokemoan') do |event|
     channel = event.user.voice_channel
     next unless channel
+
     BOT.voice_connect(channel)
 
     voice_bot = event.voice
@@ -80,6 +84,7 @@ module CornBot
   BOT.message(content: '~birdup') do |event|
     channel = event.user.voice_channel
     next unless channel
+
     BOT.voice_connect(channel)
 
     voice_bot = event.voice
@@ -92,6 +97,7 @@ module CornBot
   BOT.message do |event|
     next if event.from_bot?
     next unless event.message.attachments
+
     original_images = ImageList.new
     event.message.attachments.each do |attachment|
       # HACK: The use of Kernel#open here is a security risk
@@ -99,6 +105,7 @@ module CornBot
       original_images.each do |img|
         img.fuzz = '20%'
         next unless img.find_similar_region(WATERMARK, img.columns - 140, img.rows - 20)
+
         cropped = img.crop(0, 0, img.columns, img.rows - 20, true)
         temp_img = Tempfile.new([SecureRandom.uuid, '.jpg'])
         cropped.write(temp_img.path)
@@ -110,6 +117,7 @@ module CornBot
         BOT.add_await(:"delete_#{reply.id}", Discordrb::Events::ReactionAddEvent) do |reaction|
           next unless reaction.message.id == reply.id
           next unless reaction.user == event.message.author
+
           event.message.delete if reaction.emoji.name == HEAVY_CHECK_MARK
           reply.delete if reaction.emoji.name == CROSS_MARK
         end

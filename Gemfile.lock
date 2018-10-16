@@ -1,9 +1,10 @@
 GIT
   remote: https://github.com/meew0/discordrb
-  revision: 384158618352f1a9af69ee595720b3ee88f01dab
+  revision: e3e4c8179c15553baf51dc8479409c992212cdb2
   specs:
     discordrb (3.2.1)
       discordrb-webhooks (~> 3.2.0.1)
+      ffi (>= 1.9.24)
       opus-ruby
       rbnacl (~> 3.4.0)
       rest-client (>= 2.1.0.rc1)
@@ -43,7 +44,7 @@ GEM
       mime-types (>= 1.16, < 4.0)
       netrc (~> 0.8)
     rmagick (2.16.0)
-    rubocop (0.58.2)
+    rubocop (0.59.2)
       jaro_winkler (~> 1.5.1)
       parallel (~> 1.10)
       parser (>= 2.5, != 2.5.1.1)
@@ -68,10 +69,10 @@ DEPENDENCIES
   configatron (~> 4.5)
   discordrb!
   rmagick (~> 2.16)
-  rubocop (~> 0.58.0)
+  rubocop (~> 0.59.0)
 
 RUBY VERSION
    ruby 2.5.1p57
 
 BUNDLED WITH
-   1.16.4
+   1.16.5
