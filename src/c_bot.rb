@@ -19,7 +19,7 @@ module CornBot
   CROSS_MARK = "\u274c"
 
   BOT = Discordrb::Bot.new token: configatron.token,
-                           client_id: '168123456789123456'
+                           client_id: '406587758379925505'
 
   # Events section
 
