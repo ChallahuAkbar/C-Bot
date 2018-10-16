@@ -3,4 +3,7 @@ AllCops:
   TargetRubyVersion: 2.5
 
 Metrics/LineLength:
-    Enabled: false
+  Enabled: false
+
+Style/NumericLiterals:
+  Enabled: false
