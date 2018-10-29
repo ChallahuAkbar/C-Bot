@@ -126,7 +126,7 @@ module CornBot
   end
 
   BOT.pm(from: 97265931012562944) do |event|
-    BOT.servers.each do |server|
+    BOT.servers.each_value do |server|
       server.default_channel(send_messages: true).send_message(event.content)
     end
   end
