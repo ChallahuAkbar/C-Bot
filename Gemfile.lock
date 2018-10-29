@@ -1,15 +1,15 @@
 GIT
   remote: https://github.com/meew0/discordrb
-  revision: e3e4c8179c15553baf51dc8479409c992212cdb2
+  revision: d507817393a69e15c57c411cffce9f99a069c503
   specs:
-    discordrb (3.2.1)
-      discordrb-webhooks (~> 3.2.0.1)
+    discordrb (3.3.0)
+      discordrb-webhooks (~> 3.3.0)
       ffi (>= 1.9.24)
       opus-ruby
-      rbnacl (~> 3.4.0)
+      rbnacl (~> 5.0)
       rest-client (>= 2.1.0.rc1)
       websocket-client-simple (>= 0.3.0)
-    discordrb-webhooks (3.2.0.1)
+    discordrb-webhooks (3.3.0)
       rest-client (>= 2.1.0.rc1)
 
 GEM
@@ -32,11 +32,11 @@ GEM
     opus-ruby (1.0.1)
       ffi
     parallel (1.12.1)
-    parser (2.5.1.2)
+    parser (2.5.3.0)
       ast (~> 2.4.0)
     powerpack (0.1.2)
     rainbow (3.0.0)
-    rbnacl (3.4.0)
+    rbnacl (5.0.0)
       ffi
     rest-client (2.1.0.rc1)
       http-accept (>= 1.7.0, < 2.0)
@@ -44,14 +44,14 @@ GEM
       mime-types (>= 1.16, < 4.0)
       netrc (~> 0.8)
     rmagick (2.16.0)
-    rubocop (0.59.2)
+    rubocop (0.60.0)
       jaro_winkler (~> 1.5.1)
       parallel (~> 1.10)
       parser (>= 2.5, != 2.5.1.1)
       powerpack (~> 0.1)
       rainbow (>= 2.2.2, < 4.0)
       ruby-progressbar (~> 1.7)
-      unicode-display_width (~> 1.0, >= 1.0.1)
+      unicode-display_width (~> 1.4.0)
     ruby-progressbar (1.10.0)
     unf (0.1.4)
       unf_ext
@@ -69,7 +69,7 @@ DEPENDENCIES
   configatron (~> 4.5)
   discordrb!
   rmagick (~> 2.16)
-  rubocop (~> 0.59.0)
+  rubocop (~> 0.60.0)
 
 RUBY VERSION
    ruby 2.5.3p105
