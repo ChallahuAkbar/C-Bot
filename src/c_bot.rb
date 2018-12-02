@@ -100,8 +100,11 @@ module CornBot
 
     original_images = ImageList.new
     event.message.attachments.each do |attachment|
-      # HACK: The use of Kernel#open here is a security risk
-      original_images << Image.from_blob(open(attachment.url).read).first if attachment.image?
+      next unless attachment.image?
+
+      orig_image_file = URI.parse(attachment.url).open.read
+      original_images << Image.from_blob(orig_image_file).first
+
       original_images.each do |img|
         img.fuzz = '20%'
         next unless img.find_similar_region(WATERMARK, img.columns - 140, img.rows - 20)
