@@ -15,5 +15,13 @@ gem 'configatron', '~> 4.5'
 # ImageMagick interface
 gem 'rmagick', '~> 2.16'
 
-# Code linting
-gem 'rubocop', '~> 0.60.0', require: false, group: :development
+group :development do
+  # Code linting
+  gem 'rubocop', '~> 0.61.0', require: false
+
+  # Documentation
+  gem 'yard', '~> 0.9.0'
+
+  # Language server
+  gem 'solargraph', '~> 0.29.0'
+end
