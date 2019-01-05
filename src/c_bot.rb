@@ -18,7 +18,7 @@ module CornBot
   HEAVY_CHECK_MARK = "\u2714"
   CROSS_MARK = "\u274c"
 
-  BOT = Discordrb::Bot.new token: configatron.token, log_mode: :debug
+  BOT = Discordrb::Bot.new token: configatron.token
 
   # Events section
 
