@@ -17,11 +17,11 @@ gem 'rmagick', '~> 2.16'
 
 group :development do
   # Code linting
-  gem 'rubocop', '~> 0.61.0', require: false
+  gem 'rubocop', '~> 0.61', require: false
 
   # Documentation
   gem 'yard', '~> 0.9.0'
 
   # Language server
-  gem 'solargraph', '~> 0.29.0'
+  gem 'solargraph', '~> 0.29'
 end
