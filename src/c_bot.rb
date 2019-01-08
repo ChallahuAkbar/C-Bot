@@ -13,13 +13,12 @@ module CornBot
   include Magick
 
   WATERMARK = ImageList.new('data/images/ifunny_watermark.png')
-  WATERMARK.fuzz = '20%'
+  WATERMARK.fuzz = 0.2
 
   HEAVY_CHECK_MARK = "\u2714"
   CROSS_MARK = "\u274c"
 
-  BOT = Discordrb::Bot.new token: configatron.token,
-                           client_id: '406587758379925505'
+  BOT = Discordrb::Bot.new token: configatron.token
 
   # Events section
 
@@ -106,7 +105,7 @@ module CornBot
       original_images << Image.from_blob(orig_image_file).first
 
       original_images.each do |img|
-        img.fuzz = '20%'
+        img.fuzz = 0.2
         next unless img.find_similar_region(WATERMARK, img.columns - 140, img.rows - 20)
 
         cropped = img.crop(0, 0, img.columns, img.rows - 20, true)

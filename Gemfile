@@ -2,7 +2,7 @@
 
 source 'https://rubygems.org'
 
-ruby '2.5.3'
+ruby '2.6.0'
 
 git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
 
@@ -17,11 +17,11 @@ gem 'rmagick', '~> 2.16'
 
 group :development do
   # Code linting
-  gem 'rubocop', '~> 0.61.0', require: false
+  gem 'rubocop', '~> 0.61', require: false
 
   # Documentation
   gem 'yard', '~> 0.9.0'
 
   # Language server
-  gem 'solargraph', '~> 0.29.0'
+  gem 'solargraph', '~> 0.29'
 end
