@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/meew0/discordrb
-  revision: bafd219d54e56a44ef1224175645bdb220f15789
+  revision: 287270a17e429ff64db6b9b49ec743508b338db9
   specs:
     discordrb (3.3.0)
       discordrb-webhooks (~> 3.3.0)
@@ -52,7 +52,7 @@ GEM
     reverse_markdown (1.1.0)
       nokogiri
     rmagick (2.16.0)
-    rubocop (0.63.1)
+    rubocop (0.64.0)
       jaro_winkler (~> 1.5.1)
       parallel (~> 1.10)
       parser (>= 2.5, != 2.5.1.1)
@@ -61,7 +61,7 @@ GEM
       ruby-progressbar (~> 1.7)
       unicode-display_width (~> 1.4.0)
     ruby-progressbar (1.10.0)
-    solargraph (0.31.2)
+    solargraph (0.31.3)
       backport (~> 0.3)
       htmlentities (~> 4.3, >= 4.3.4)
       jaro_winkler (~> 1.5)
