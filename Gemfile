@@ -11,7 +11,7 @@ gem 'discordrb', github: 'meew0/discordrb'
 gem 'configatron', '~> 4.5'
 
 # ImageMagick interface
-gem 'rmagick', '~> 2.16'
+gem 'rmagick', '~> 3.0'
 
 group :development do
   # Code linting
@@ -21,5 +21,5 @@ group :development do
   gem 'yard', '~> 0.9.0'
 
   # Language server
-  gem 'solargraph', '~> 0.29'
+  gem 'solargraph', require: false
 end
