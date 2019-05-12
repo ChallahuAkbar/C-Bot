@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/meew0/discordrb
-  revision: 9caf6e42a9f965349d9a320d5b6e41ef5e7eae66
+  revision: 329045797fb2eb76275d47403eb08016458910e6
   specs:
     discordrb (3.3.0)
       discordrb-webhooks (~> 3.3.0)
@@ -16,7 +16,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     ast (2.4.0)
-    backport (0.3.0)
+    backport (1.0.0)
     configatron (4.5.1)
     domain_name (0.5.20180417)
       unf (>= 0.0.5, < 1.0.0)
@@ -30,17 +30,16 @@ GEM
     kramdown (1.17.0)
     mime-types (3.2.2)
       mime-types-data (~> 3.2015)
-    mime-types-data (3.2018.0812)
+    mime-types-data (3.2019.0331)
     mini_portile2 (2.4.0)
     netrc (0.11.0)
-    nokogiri (1.10.1)
+    nokogiri (1.10.3)
       mini_portile2 (~> 2.4.0)
     opus-ruby (1.0.1)
       ffi
-    parallel (1.14.0)
-    parser (2.6.0.0)
+    parallel (1.17.0)
+    parser (2.6.3.0)
       ast (~> 2.4.0)
-    psych (3.1.0)
     rainbow (3.0.0)
     rbnacl (6.0.1)
       ffi
@@ -51,18 +50,20 @@ GEM
       netrc (~> 0.8)
     reverse_markdown (1.1.0)
       nokogiri
-    rmagick (3.0.0)
-    rubocop (0.66.0)
+    rmagick (3.1.0)
+    rubocop (0.68.1)
       jaro_winkler (~> 1.5.1)
       parallel (~> 1.10)
       parser (>= 2.5, != 2.5.1.1)
-      psych (>= 3.1.0)
       rainbow (>= 2.2.2, < 4.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 1.4.0, < 1.6)
+    rubocop-performance (1.2.0)
+      rubocop (>= 0.68.0)
     ruby-progressbar (1.10.0)
-    solargraph (0.31.3)
-      backport (~> 0.3)
+    solargraph (0.32.2)
+      backport (~> 1.0)
+      bundler (>= 1.17.2)
       htmlentities (~> 4.3, >= 4.3.4)
       jaro_winkler (~> 1.5)
       kramdown (~> 1.16)
@@ -76,13 +77,13 @@ GEM
     tilt (2.0.9)
     unf (0.1.4)
       unf_ext
-    unf_ext (0.0.7.5)
+    unf_ext (0.0.7.6)
     unicode-display_width (1.5.0)
     websocket (1.2.8)
     websocket-client-simple (0.3.0)
       event_emitter
       websocket
-    yard (0.9.18)
+    yard (0.9.19)
 
 PLATFORMS
   ruby
@@ -91,7 +92,8 @@ DEPENDENCIES
   configatron (~> 4.5)
   discordrb!
   rmagick (~> 3.0)
-  rubocop (~> 0.61)
+  rubocop (~> 0.68.0)
+  rubocop-performance (~> 1.1)
   solargraph
   yard (~> 0.9.0)
 
