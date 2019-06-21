@@ -73,6 +73,10 @@ GEM
       thor (~> 0.19, >= 0.19.4)
       tilt (~> 2.0)
       yard (~> 0.9)
+    sorbet (0.4.4314)
+      sorbet-static (= 0.4.4314)
+    sorbet-runtime (0.4.4314)
+    sorbet-static (0.4.4314-universal-darwin-14)
     thor (0.20.3)
     tilt (2.0.9)
     unf (0.1.4)
@@ -95,6 +99,8 @@ DEPENDENCIES
   rubocop (~> 0.72.0)
   rubocop-performance (~> 1.1)
   solargraph
+  sorbet
+  sorbet-runtime
   yard (~> 0.9.0)
 
 BUNDLED WITH

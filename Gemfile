@@ -13,6 +13,9 @@ gem 'configatron', '~> 4.5'
 # ImageMagick interface
 gem 'rmagick', '~> 3.0'
 
+# Runtime type checking
+gem 'sorbet-runtime'
+
 group :development do
   # Code linting
   gem 'rubocop', '~> 0.72.0', require: false
@@ -23,4 +26,7 @@ group :development do
 
   # Language server
   gem 'solargraph', require: false
+
+  # Type checking
+  gem 'sorbet'
 end
