@@ -19,7 +19,7 @@ group :development do
   gem 'rubocop-performance', '~> 1.1', require: false
 
   # Documentation
-  gem 'yard', '~> 0.9.0'
+  gem 'yard', '~> 0.9.20'
 
   # Language server
   gem 'solargraph', require: false
