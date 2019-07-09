@@ -23,7 +23,7 @@ module CornBot
   # Events section
 
   # Adds event to kick any user who says the secret word
-  BOT.message(with_text: /\bantiquities\b/i) do |event|
+  BOT.message(with_text: /\bschadenfreude\b/i) do |event|
     event.server.kick(event.author)
   end
 
