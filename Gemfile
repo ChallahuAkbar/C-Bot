@@ -11,15 +11,15 @@ gem 'discordrb', github: 'meew0/discordrb'
 gem 'configatron', '~> 4.5'
 
 # ImageMagick interface
-gem 'rmagick', '~> 3.0'
+gem 'rmagick', '~> 4.0'
 
 group :development do
   # Code linting
-  gem 'rubocop', '~> 0.72.0', require: false
+  gem 'rubocop', '~> 0.73.0', require: false
   gem 'rubocop-performance', '~> 1.1', require: false
 
   # Documentation
-  gem 'yard', '~> 0.9.0'
+  gem 'yard', '~> 0.9.20'
 
   # Language server
   gem 'solargraph', require: false
