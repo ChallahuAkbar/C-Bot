@@ -23,4 +23,7 @@ group :development do
 
   # Language server
   gem 'solargraph', require: false
+
+  # Better REPL
+  gem 'pry', require: false
 end
