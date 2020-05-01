@@ -2,10 +2,8 @@ require: rubocop-performance
 
 AllCops:
   DisplayStyleGuide: true
+  NewCops: enable
   TargetRubyVersion: 2.7
 
-Metrics/LineLength:
-  Enabled: false
-
-Style/NumericLiterals:
+Layout/LineLength:
   Enabled: false

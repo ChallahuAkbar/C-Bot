@@ -127,7 +127,7 @@ module CornBot
     end
   end
 
-  BOT.pm(from: 97265931012562944) do |event|
+  BOT.pm(from: 97265931012562944) do |event| # rubocop:disable Style/NumericLiterals
     BOT.servers.each_value do |server|
       server.default_channel(send_messages: true).send_message(event.content)
     end
