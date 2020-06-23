@@ -3,7 +3,7 @@
 source 'https://rubygems.org'
 
 # Ruby bindings for Discord API
-gem 'discordrb', github: 'discordrb'
+gem 'discordrb', github: 'swarley/discordrb', branch: 'voice_test'
 
 # Configuration manager
 gem 'configatron', '~> 4.5'
