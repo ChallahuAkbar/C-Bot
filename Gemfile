@@ -13,7 +13,7 @@ gem 'rmagick', '~> 4.1'
 
 group :development do
   # Code linting
-  gem 'rubocop', '~> 0.82.0', require: false
+  gem 'rubocop', '~> 0.86.0', require: false
   gem 'rubocop-performance', '~> 1.1', require: false
 
   # Documentation
